@@ -1,70 +1,159 @@
-# Getting Started with Create React App
+# 🛒 E-Commerce Website (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A complete **React-based E-Commerce web application** built as a capstone project.  
+This project includes product listing, product details, cart functionality, admin product management, authentication, and UI enhancements like Dark/Light mode.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Live Demo
 
-### `npm start`
+🔗 Frontend: https://frontend-vqpc.onrender.com  
+*(Backend optional – products are managed using localStorage)*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📌 Features
 
-### `npm test`
+### 👤 User Features
+- View all products
+- Search products by name
+- Filter products by price range
+- View product details
+- Add products to cart
+- Update cart quantity
+- Remove products from cart
+- Checkout page
+- Dark / Light mode toggle
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+### 🛠 Admin Features
+- Admin login
+- Add new products
+- Delete products
+- Admin-added products appear on Home page
+- Admin-added products have working **View Details**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧩 Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Frontend:** React, React Router
+- **State Management:** Zustand
+- **Styling:** CSS
+- **API:** FakeStore API
+- **Storage:** localStorage (for admin-added products)
+- **Deployment:** Render
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📂 Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+src/
+│── api/
+│   ├── api.js
+│   ├── fakeStore.js
+│
+│── components/
+│   ├── Navbar.js
+│   ├── ProductCard.js
+│   ├── ThemeToggle.js
+│
+│── pages/
+│   ├── Home.js
+│   ├── Products.js
+│   ├── ProductDetails.js
+│   ├── Cart.js
+│   ├── Checkout.js
+│   ├── Login.js
+│   ├── Register.js
+│   ├── AdminLogin.js
+│   ├── AdminDashboard.js
+│   ├── AddProduct.js
+│
+│── store/
+│   ├── authStore.js
+│   ├── cartStore.js
+│   ├── themeStore.js
+│
+│── utils/
+│   ├── productStorage.js
+│
+│── App.js
+│── index.js
+│── App.css
+│── index.css
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🔑 Admin Login
 
-## Learn More
+This project uses **frontend-only admin authentication**.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Example:
+- Username: `admin`
+- Password: `admin123`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+*(You can change this logic inside `AdminLogin.js`)*
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🛒 Cart Management
 
-### Analyzing the Bundle Size
+- Uses **Zustand**
+- Cart state persists during session
+- Supports:
+  - Add to Cart
+  - Increase / Decrease quantity
+  - Remove item
+  - Total price calculation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🌙 Dark / Light Mode
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Implemented using **Zustand**
+- Toggle available in Navbar
+- Theme persists across pages
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🧪 How to Run Locally
 
-### Deployment
+```bash
+npm install
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Runs on: `http://localhost:3000`
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📦 Deployment
+
+- Frontend deployed on **Render**
+- Static site deployment
+- Any future commits automatically redeploy
+
+---
+
+## 📌 Notes
+
+- Backend is optional
+- Admin-added products are stored in `localStorage`
+- FakeStore API products are merged with admin products on Home page
+
+---
+
+## 👩‍💻 Author
+
+**Smitha Prasad.D**  
+Capstone Project – E-Commerce Website
+
+---
+
+## ⭐ If you like this project
+
+Give it a ⭐ on GitHub 🙂

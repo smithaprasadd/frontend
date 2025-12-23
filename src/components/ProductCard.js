@@ -1,31 +1,32 @@
 import { Link } from "react-router-dom";
 import { useCartStore } from "../store/cartStore";
+import "./ProductCard.css";
 
 function ProductCard({ product }) {
-  const addToCart = useCartStore((s) => s.addToCart);
+  const addToCart = useCartStore((state) => state.addToCart);
 
   return (
-    <div
-      style={{
-        border: "1px solid #ddd",
-        borderRadius: "8px",
-        padding: "15px",
-        background: "#fff",
-      }}
-    >
+    <div className="product-card">
       <img
-        src={product.image}
-        alt={product.title}
-        style={{ width: "100%", height: "200px", objectFit: "contain" }}
+        src={product.image || "https://via.placeholder.com/150"}
+        alt={product.title || product.name}
       />
 
-      <h4>{product.title}</h4>
-      <p>₹{product.price}</p>
+      <h4>{product.title || product.name}</h4>
+      <p className="price">₹{product.price}</p>
 
-      <button onClick={() => addToCart(product)}>Add to Cart</button>
-      <br />
+      <div className="card-buttons">
+        <Link to={`/product/${product.id}`} className="details-btn">
+          View Details
+        </Link>
 
-      <Link to={`/product/${product.id}`}>View Details</Link>
+        <button
+          className="cart-btn"
+          onClick={() => addToCart(product)}
+        >
+          Add to Cart
+        </button>
+      </div>
     </div>
   );
 }
